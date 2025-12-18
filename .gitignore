@@ -1,0 +1,12 @@
+# dependências
+node_modules
+
+# build
+.next
+dist
+
+# envs
+.env
+.env.local
+.env.development
+.env.production
