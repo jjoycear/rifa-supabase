@@ -89,7 +89,8 @@ export default function Home() {
   const generatePixLink = () => {
     if (totalPix === 0) return "#";
     const description = `Rifa ${selectedSlots.sort((a, b) => a - b).join(", ")}`;
-    const pixLink = `pix://19991318550?sa=Juliet Joyce de Araujo&desc=${encodeURIComponent(description)}&amt=${totalPix.toFixed(2)}`;
+    // Usando formato correto de PIX: chave (telefone), nome do recebedor e valor
+    const pixLink = `https://nubank.com.br/pix/19991318550`;
     return pixLink;
   };
 
