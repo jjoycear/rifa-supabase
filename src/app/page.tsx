@@ -35,6 +35,10 @@ export default function Home() {
     return () => { supabaseBrowser.removeChannel(ch); };
   }, []);
 
+  const totalNumbers = 100;
+  const reservedCount = new Set(entries.map(e => e.slot)).size;
+  const remaining = Math.max(0, totalNumbers - reservedCount);
+
   async function reserve() {
     if (selectedSlots.length === 0 || !firstName || !lastName) {
       alert("Por favor, preencha nome, sobrenome e telefone");
@@ -101,6 +105,7 @@ export default function Home() {
         <p className="mb-2"><b>🎁 Prêmio:</b> Cesta de Natal</p>
         <p className="mb-2">Cada número custa <b>R$ 10,00</b></p>
         <p>O sorteio será realizado após a venda de <b>todos os 100 números</b></p>
+        <p className="mt-2 text-lg">Faltam: <b className="text-red-600">{remaining} {remaining === 1 ? 'número' : 'números'}</b></p>
       </div>
 
       <div className="grid grid-cols-10 gap-2 mb-6">
