@@ -133,14 +133,13 @@ export default function Home() {
         <p className="mt-2 text-lg">Total de PIX: <b className="text-green-600">R$ {totalPix.toFixed(2).replace(".", ",")}</b></p>
 
         {selectedSlots.length > 0 && (
-          <a
-            href={generatePixLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 w-full bg-blue-600 text-white p-2 rounded block text-center hover:bg-blue-700"
-          >
-            💳 Pagar via PIX
-          </a>
+          <div className="mt-4 bg-blue-50 p-3 rounded border border-blue-200">
+            <p className="mb-2 font-bold text-sm">💳 Dados para PIX:</p>
+            <p className="text-sm">Chave PIX: <b>19991318550</b></p>
+            <p className="text-sm">Titular: <b>Juliet Joyce de Araujo</b></p>
+            <p className="text-sm">Banco: <b>Nubank</b></p>
+            <p className="text-sm mt-2">Valor: <b className="text-green-600">R$ {totalPix.toFixed(2).replace(".", ",")}</b></p>
+          </div>
         )}
 
         <p className="mt-4 mb-2 font-bold text-sm">Dados para confirmar:</p>
