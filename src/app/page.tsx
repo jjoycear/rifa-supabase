@@ -98,10 +98,9 @@ export default function Home() {
     <main className="min-h-screen bg-gray-100 p-6">
       <h1 className="text-3xl font-bold mb-2">🎟️ Rifa Solidária</h1>
       <div className="mb-4 bg-white p-4 rounded shadow">
-        <p className="mb-2"><b>Dados para PIX:</b></p>
-        <p>Chave PIX: <b>19991318550</b></p>
-        <p>Titular: <b>Juliet Joyce de Araujo</b></p>
-        <p>Banco: <b>Nubank</b></p>
+        <p className="mb-2"><b>🎁 Prêmio:</b> Cesta de Natal</p>
+        <p className="mb-2">Cada número custa <b>R$ 10,00</b></p>
+        <p>O sorteio será realizado após a venda de <b>todos os 100 números</b></p>
       </div>
 
       <div className="grid grid-cols-10 gap-2 mb-6">
